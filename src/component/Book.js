@@ -6,12 +6,14 @@ class Book extends Component {
     return (
       <div>
         <Render
+          deleteBookFun={this.props.deleteBookFun}
           key={this.props.index}
-          title={this.props.ArrayOfbook.title}
-          author={this.props.ArrayOfbook.author}
-          description={this.props.ArrayOfbook.description}
-          status={this.props.ArrayOfbook.status}
-          email={this.props.ArrayOfbook.email}
+          title={this.props.books_data.title}
+          author={this.props.books_data.author}
+          description={this.props.books_data.description}
+          status={this.props.books_data.status}
+          email={this.props.books_data.email}
+          id={this.props.books_data._id}
         />
       </div>
     );
