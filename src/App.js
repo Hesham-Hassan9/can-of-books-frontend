@@ -1,6 +1,6 @@
 import React from "react";
 import Header from "./Header";
-import IsLoadingAndError from "./IsLoadingAndError";
+// import IsLoadingAndError from "./IsLoadingAndError";
 import Footer from "./Footer";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { withAuth0 } from "@auth0/auth0-react";
