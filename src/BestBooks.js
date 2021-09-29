@@ -90,11 +90,10 @@ class MyFavoriteBooks extends React.Component {
       email: this.props.auth0.user.email,
       id: this.state.bookUpdateInfo._id
     }
-  console.log(bookFormUpdateInfo);
     let updateData = await axios.put(`${process.env.REACT_APP_BACKEND_URL}/update-book`, bookFormUpdateInfo);
     
     this.setState({
-      booksData: updateData.data
+      books_data: updateData.data
     })
   }
 
