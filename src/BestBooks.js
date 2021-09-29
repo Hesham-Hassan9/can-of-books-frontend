@@ -31,11 +31,11 @@ class MyFavoriteBooks extends React.Component {
     e.preventDefault();
 
     let bookFormInfo = {
-      title1: e.target.title.value,
-      author1: e.target.author.value,
-      description1: e.target.description.value,
-      status1: e.target.status.value,
-      email1: this.props.auth0.user.email,
+      title: e.target.title.value,
+      author: e.target.author.value,
+      description: e.target.description.value,
+      status: e.target.status.value,
+      email: this.props.auth0.user.email,
     };
 
     let createData = await axios.post(
@@ -51,8 +51,12 @@ class MyFavoriteBooks extends React.Component {
   deleDataBook = async (id) => {
     let email = this.props.auth0.user.email;
 
+    // let deleData = await axios.delete(
+    //   `${process.env.REACT_APP_BACKEND_URL}/delete-book?id=${id}&email=${email}`
+    // );
+
     let deleData = await axios.delete(
-      `${process.env.REACT_APP_BACKEND_URL}/delete-book?id=${id}&email=${email}`
+      `${process.env.REACT_APP_BACKEND_URL}/delete-book/${id}?email=${email}`
     );
 
     console.log(deleData);
